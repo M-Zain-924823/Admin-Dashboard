@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-auto-rows: 1fr 4fr;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+aside{ 
+    grid-row: span 2;
+}
+
+header {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.header-nav,
+.header-content {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+}
+
+.your-projects {
+    grid-row: span 2;
+}
