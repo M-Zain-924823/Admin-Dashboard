@@ -8,9 +8,10 @@
 
 body {
     display: grid;
-    grid-template: auto 1fr / clamp(100px, 20%, 300px) 1fr;
+    grid-template: auto 1fr / minmax(260px, 300px) 1fr;
     grid-template-areas: "sidebar header"
                         "sidebar main";
+    height: 100vh;
 }
 
 .header {
@@ -22,6 +23,7 @@ body {
     background-color: #1892d3;
     color: white;
     display: grid;
+    grid-auto-rows: min-content;
     padding: 16px;
     gap: 48px;
 }
@@ -32,11 +34,40 @@ body {
 }
 
 .logo {
-    width: 48px;
+    width: 32px;
 }
 
 h1 {
+    font-weight: 700;
+    font-size: 32px;
+}
+
+ul {list-style-type: none;}
+
+a {
+    text-decoration: none;
+    color: white;
     font-weight: 600;
+    font-size: 18px;
+}
+
+.pages {
+    display: grid;
+    gap: 16px;
+}
+
+.pages a span + span {
+    margin-left: 16px;
+}
+
+.pages li:nth-child(7) {
+    margin-top: 48px;
+}
+
+.icon {
+    width: 22px;
+    position: relative;
+    top: 4px;
 }
 
 .main {
