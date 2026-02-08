@@ -1,0 +1,25 @@
+* {
+    /* border: 2px solid red; */
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    display: grid;
+    grid-template: 300px 1fr / 300px 1fr;
+    grid-template-areas: "sidebar header"
+                        "sidebar main";
+}
+
+.header {
+    grid-area: header;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.main {
+    grid-area: main;
+}
