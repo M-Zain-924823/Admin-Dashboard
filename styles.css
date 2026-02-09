@@ -50,7 +50,7 @@ body {
 }
 
 .pfp {
-    width: 38px;
+    width: 42px;
 }
 
 .user-name {
@@ -111,6 +111,7 @@ body {
     padding: 16px;
     gap: 48px;
     max-width: 300px;
+    /* overflow: auto; */
 }
 
 .icon-container {
@@ -158,4 +159,66 @@ a {
 .main {
     grid-area: main;
     background-color: var(--grey);
+    display: grid;
+    grid-template: auto 1fr / 1fr auto;
+    padding: 38px 16px;
+    gap: 38px 16px;
+}
+
+.main > :first-child {
+    grid-row: span 2;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 16px;
+}
+
+.cards {
+    border-radius: 10px;
+    border-left: 10px solid var(--yellow);
+    background-color: white;
+    padding: 32px 24px;
+    display: grid;
+    grid-template-rows: max-content max-content auto;
+}
+
+.cards p {margin-bottom: 16px;}
+.cards :last-child {margin-top: auto;}
+
+.cards > div {
+    display: grid;
+    justify-content: end;
+    grid-auto-flow: column;
+    gap: 24px;
+}
+
+.announcements {
+    background-color: white;
+    padding: 32px 24px;
+    border-radius: 10px;
+    display: grid;
+    gap: 18px;
+}
+
+.item {
+    padding: 0px 4px;
+    width: 28ch;
+    height: 9ch;
+    text-overflow: ellipsis;    
+    overflow: hidden;
+    position: relative;
+}
+
+h2 {margin-bottom: 16px;}
+
+.trending {
+    background-color: white;
+    padding: 32px 24px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 24px 16px;
 }
